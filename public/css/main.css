@@ -1,0 +1,408 @@
+:root {
+  --blue: #1fa2f1;
+  --buttonHoverBg: #d4edff;
+  --lightGrey: rgb(230, 236, 240);
+  --spacing: 15px;
+  --greyText: rgb(101, 119, 134);
+  --greyButtonText: rgba(0, 0, 0, 0.34);
+  --red: rgb(226, 34, 94);
+  --redBackground: rgba(226, 34, 94, 0.1);
+  --green: rgb(23, 191, 99);
+  --greenBackground: rgba(23, 191, 99, 0.1);
+}
+
+.main-content-container {
+  border-right: 1px solid #fff;
+}
+
+.titleContainer {
+  padding: 0px !important;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--lightGrey);
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.postContainer {
+  display: flex;
+  padding: var(--spacing);
+  border-bottom: 1px solid #fff;
+  flex-shrink: 0;
+}
+
+.userImageContainer {
+  width: 40px;
+  height: 40px;
+}
+
+.userImageContainer img {
+  width: 100%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.textareaContainer {
+  flex: 1;
+  padding-left: var(--spacing);
+}
+
+.textareaContainer textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 19px;
+  background-color: #000;
+  color: white;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#submitPostButton {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 7px 15px;
+}
+
+#submitPostButton {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 7px 15px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-bottom: 1px solid var(--lightGrey);
+  flex-shrink: 0;
+  padding: 16px;
+}
+
+.post a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+.mainContentContainer {
+  flex: 1;
+  display: flex;
+}
+
+.postContentContainer {
+  padding-left: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.postContentContainer .header .reply {
+  font-size: 14px;
+  color: grey;
+}
+
+.username,
+.date {
+  color: var(--greyText);
+}
+
+.displayName {
+  font-weight: bold;
+}
+
+.postFooter {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.postFooter .postButtonContainer {
+  flex: 1;
+  display: flex;
+}
+
+.postFooter .postButtonContainer button {
+  padding: 2px 5px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+}
+
+.postButtonContainer button:hover {
+  background-color: #d4edff;
+  color: var(--blue);
+  border-radius: 50%;
+}
+
+.postButtonContainer.red button.active {
+  color: var(--red);
+}
+
+.postButtonContainer.red button:hover {
+  color: var(--red);
+  background-color: var(--redBackground);
+}
+
+.postButtonContainer.green button.active {
+  color: var(--green);
+}
+
+.postButtonContainer.green button:hover {
+  color: var(--green);
+  background-color: var(--greenBackground);
+}
+
+.postActionContainer {
+  padding-left: 35px;
+  font-size: 13px;
+  color: var(--greyText);
+  margin-bottom: 5px;
+}
+
+.replyFlag {
+  margin-bottom: 5px;
+}
+
+.replyFlag a {
+  color: var(--blue);
+}
+
+.post.largeFont .postBody,
+.post.largeFont .postFooter {
+  font-size: 23px;
+}
+
+.errorMessage {
+  padding: var(--spacing);
+}
+
+.coverPhotoContainer {
+  height: 180px;
+  background-color: var(--blue);
+  position: relative;
+}
+
+.profileHeaderContainer .profileButtonsContainer {
+  text-align: right;
+  padding: var(--spacing);
+  min-height: 66px;
+}
+
+.profileButton,
+.followButton {
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 60px;
+  display: inline-block;
+  margin-left: var(--spacing);
+}
+
+.profileButton:hover,
+.followButton:hover {
+  background-color: var(--blueBackground);
+}
+
+.followButton.following {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.profileHeaderContainer .userDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--spacing);
+}
+
+.followersContainer .value {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.followersContainer span:not(.value) {
+  color: var(--greyText);
+}
+
+.followersContainer a {
+  margin-right: 15px;
+}
+
+.followersContainer a:hover {
+  border-bottom: 1px solid #000;
+}
+
+.tabsContainer {
+  display: flex;
+  border-bottom: 1px solid var(--lightGrey);
+  flex-shrink: 0;
+}
+
+.tab {
+  flex: 1;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--greyText);
+  font-weight: bold;
+}
+
+.tab.active {
+  color: var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+.tab:hover {
+  color: var(--blue);
+  background-color: var(--blueBackground);
+}
+
+#msg-text:focus {
+  outline: none;
+}
+
+#send-msg-btn {
+  border: none;
+  background: none;
+  background-color: var(--blue);
+  color: var(--lightGrey);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+#all-msg-container {
+  list-style: none;
+}
+
+.nav-container {
+  width: 280px;
+  border-right: 1px solid lightgrey;
+  min-height: 100vh;
+}
+
+.nav-container a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-container a i {
+  font-size: 24px;
+}
+
+.nav-container a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+}
+
+.nav-container a i {
+  margin-right: 20px;
+}
+
+.nav-container a:first-child i {
+  margin-right: 0;
+  border-radius: 50%;
+}
+
+.nav-container .logo {
+  font-size: 32px;
+}
+
+.mainSectionContainer {
+  border-right: 1px solid #fff;
+}
+
+.mainSectionContainer .titleContainer {
+  margin: 10px 0;
+}
+
+.mainSectionContainer .titleContainer i {
+  height: 16px;
+  width: 16px;
+  color: #fff;
+}
+
+.mainSectionContainer .titleContainer h1 {
+  font-weight: 600;
+}
+
+.profileHeaderContainer {
+  position: relative;
+}
+
+.profileHeaderContainer .userImageContainer {
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  bottom: 75px;
+  left: 10px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profileHeaderContainer .userImageContainer img {
+  height: 100%;
+  width: 100%;
+}
+
+.userDetailsContainer .followersContainer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.tabsContainer a {
+  text-decoration: none;
+}
+
+.messages-container .compose-message {
+  margin: 20px 0;
+}
+
+.messages-container .compose-message button {
+  height: 40px;
+  width: 100px;
+}
+
+.messages-container textarea {
+  width: 100%;
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#all-msg-container {
+  padding: 0;
+}
+
+.message {
+  background-color: #07588a;
+  padding: 8px;
+  margin: 10px 0;
+  min-height: 50px;
+  border-radius: 4 px;
+}
+
+.msg-user {
+  font-weight: 600;
+}
+
+.msg-time {
+  color: lightgrey;
+  font-weight: 400;
+}
