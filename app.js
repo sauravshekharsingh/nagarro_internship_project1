@@ -7,6 +7,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 const flash = require("connect-flash");
+require("dotenv").config();
 const { isLoggedIn } = require("./middleware");
 
 // Chat functionality
@@ -18,7 +19,7 @@ const Chat = require("./models/chat");
 
 // Database
 mongoose
-  .connect("mongodb://localhost:27017/twitter")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("db connected");
   })
@@ -101,6 +102,6 @@ io.on("connection", (socket) => {
 });
 
 // Server
-server.listen(8080, () => {
+server.listen(process.env.PORT, () => {
   console.log("Server running at port 8080");
 });
