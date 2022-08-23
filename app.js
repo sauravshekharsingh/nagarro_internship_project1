@@ -3,6 +3,7 @@ const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user");
@@ -50,7 +51,8 @@ const { accessSync } = require("fs");
 // Express session
 app.use(
   session({
-    secret: "weneedasomebettersecret",
+    secret: process.env.EXPRESS_SESSION_SECRET,
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL }),
     resave: false,
     saveUninitialized: true,
   })
