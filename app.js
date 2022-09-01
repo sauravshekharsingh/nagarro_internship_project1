@@ -22,7 +22,7 @@ const Chat = require("./models/chat");
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
-    console.log("db connected");
+    console.log("Connected to the database");
   })
   .catch((err) => {
     console.log(err);
@@ -106,4 +106,5 @@ io.on("connection", (socket) => {
 // Server
 server.listen(process.env.PORT, () => {
   console.log("Server running at port", process.env.PORT);
+  console.log("Go to http://localhost:8000/");
 });
