@@ -406,3 +406,19 @@ h1 {
   color: lightgrey;
   font-weight: 400;
 }
+
+.modal {
+  color: black;
+}
+
+.modal a {
+  color: black;
+}
+
+.modal button {
+  border: none;
+}
+
+.modal i {
+  color: black;
+}

@@ -42,6 +42,8 @@ $("#submitReplyButton").click(async (event) => {
     content: postText,
     replyTo: replyTo,
   });
+
+  window.location.reload();
 });
 
 $("#replyModal").on("show.bs.modal", async (event) => {
