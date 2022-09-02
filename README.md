@@ -1,6 +1,6 @@
 # Twitter Clone Web Application
 
-A Full Stack Twitter Clone web application built using HTML, CSS, JavaScript, Node.js, Express, MongoDB, EJS
+A Full Stack Twitter Clone web application built using HTML, CSS, JavaScript, Node.js, Express, MongoDB, and EJS
 
 ## Installation
 
